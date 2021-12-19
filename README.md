@@ -7,7 +7,7 @@ For extensive details on the metrics see the [docs from Netbeheer Nederland](htt
 
 This project is forked from Harry Metske [`gotsmart`](https://github.com/metskem/gotsmart). Harry forked the project from [Bas Roovers](https://github.com/basroovers) and Bas forked from [Bas van der Lei](https://github.com/basvdlei/gotsmart). Thanks to Harry, Bas and Bas!
 
-I upgraded to `go1.17` and am using go modules. I've configured a release pipeline that creates binaries for more platforms and architectures (amongst others FreeBSD).
+I upgraded to `go1.17` and am using go modules. I've configured a release pipeline that creates [binary releases](https://github.com/egbertp/gotsmart/releases) for both windows and linux, compiled for different CPU architectures.
 
 ## Setup
 
@@ -79,3 +79,12 @@ poteb/gotsmart     latest    30754165bf37   8 seconds ago   11.5MB
 |                                           |                                                       | **Total without case**                                                                                                          | **€ 55,80** |
 | FLIRC Raspberry Pi Zero Behuizing         | N/A                                                   | [SOS Solutions](https://www.sossolutions.nl/flirc-raspberry-pi-zero-behuizing)                                                  | € 12,95     |
 |                                           |                                                       | **Total with case**                                                                                                             | **€ 68,75** |
+
+## Known errors
+
+Cross compiling to `OpenBSD`, `MacOS (Darwin)`, and `FreeBSD` was not successfull due to an error in the `github.com/tarm/serial` dependency. I hope someone will be able to fix this.
+
+```
+github.com/tarm/serial@v0.0.0-20180830185346-98f6abe2eb07/serial.go:128:28: undefined: Port
+github.com/tarm/serial@v0.0.0-20180830185346-98f6abe2eb07/serial.go:139:9: undefined: openPort
+```
