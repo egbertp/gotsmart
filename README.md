@@ -1,5 +1,7 @@
 # GotSmart
 
+[![workflow](https://github.com/egbertp/gotsmart/workflows/goreleaser/badge.svg)](https://github.com/egbertp/gotsmart/releases)
+
 GotSmart collects information from the Dutch Slimme Meter (translated as Smart Meter) and exports them as Prometheus metrics.
 For extensive details on the metrics see the [docs from Netbeheer Nederland](https://www.netbeheernederland.nl/_upload/Files/Slimme_meter_15_a727fce1f1.pdf)
 
