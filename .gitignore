@@ -20,3 +20,6 @@ gotsmart
 
 # target dir
 target
+
+# dist dir
+dist

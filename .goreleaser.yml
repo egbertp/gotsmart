@@ -7,17 +7,34 @@ before:
 builds:
   - env:
       - CGO_ENABLED=0
-    main: ./cmd/main.go
+    main: ./gotsmart.go
     goos:
       - linux
       - windows
-      - darwin
-      - freebsd
-      - openbsd
+      #  Can't compile for darwin, freebsd and openbsd. Got error:
+      # ../../../golang/pkg/mod/github.com/tarm/serial@v0.0.0-20180830185346-98f6abe2eb07/serial.go:128:28: undefined: Port
+      # ../../../golang/pkg/mod/github.com/tarm/serial@v0.0.0-20180830185346-98f6abe2eb07/serial.go:139:9: undefined: openPort
+      # - darwin
+      # - freebsd
+      # - openbsd
     goarch:
       - amd64
       - arm
       - arm64
+    goarm:
+      - 6
+      - 7
+    ignore:
+      # - goos: openbsd
+      #   goarch: arm # maybe this one does compile
+      #   goarm: 6
+      # - goos: openbsd
+      #   goarch: arm # maybe this one does compile
+      #   goarm: 7
+      # - goos: openbsd
+      #   goarch: arm64
+      # - goos: freebsd
+      #   goarch: arm64
 archives:
 - format: binary
 checksum:

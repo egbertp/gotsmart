@@ -5,7 +5,7 @@ For extensive details on the metrics see the [docs from Netbeheer Nederland](htt
 
 This project is forked from Harry Metske [`gotsmart`](https://github.com/metskem/gotsmart). Harry forked the project from [Bas Roovers](https://github.com/basroovers) and Bas forked from [Bas van der Lei](https://github.com/basvdlei/gotsmart). Thanks to Harry, Bas and Bas!
 
-I upgraded to `go1.17` and am using go modules. I've configured a release pipeline that creates binaries for more platforms and architectures (amongst others OpenBSD and FreeBSD).
+I upgraded to `go1.17` and am using go modules. I've configured a release pipeline that creates binaries for more platforms and architectures (amongst others FreeBSD).
 
 ## Setup
 
@@ -74,6 +74,6 @@ poteb/gotsmart     latest    30754165bf37   8 seconds ago   11.5MB
 | Zero Essentials Kit                       | N/A                                                   | [Raspberry Store](https://www.raspberrystore.nl/PrestaShop/raspberry-pi-zero-2/379-zero-essentials-kit.html)                    | € 6,95      |
 | Power adapter (T6716DV)                   | N/A                                                   | [Raspberry Store](https://www.raspberrystore.nl/PrestaShop/raspberry-pi-v3-b-2018/248-micro-usb-stroomadapter-pi3.html)         | € 9,95      |
 | Slimme Meter Kabel - 1.8 Meter (P1 kabel) | N/A                                                   | [SOS Solutions](https://www.sossolutions.nl/slimme-meter-kabel)                                                                 | € 19,95     |
-|                                           |                                                       | **Total cost without case**                                                                                                     | **€ 55,80** |
+|                                           |                                                       | **Total without case**                                                                                                          | **€ 55,80** |
 | FLIRC Raspberry Pi Zero Behuizing         | N/A                                                   | [SOS Solutions](https://www.sossolutions.nl/flirc-raspberry-pi-zero-behuizing)                                                  | € 12,95     |
-|                                           |                                                       | **Total cost with case**                                                                                                        | **€ 68,75** |
+|                                           |                                                       | **Total with case**                                                                                                             | **€ 68,75** |
