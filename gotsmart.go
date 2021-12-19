@@ -3,15 +3,16 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/metskem/gotsmart/conf"
 	"log"
 	"net/http"
 	"strings"
 	"time"
 
-	"github.com/metskem/gotsmart/crc16"
-	"github.com/metskem/gotsmart/dsmr"
-	dsmrprometheus "github.com/metskem/gotsmart/dsmr/prometheus"
+	"github.com/egbertp/gotsmart/conf"
+
+	"github.com/egbertp/gotsmart/crc16"
+	"github.com/egbertp/gotsmart/dsmr"
+	dsmrprometheus "github.com/egbertp/gotsmart/dsmr/prometheus"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/tarm/serial"

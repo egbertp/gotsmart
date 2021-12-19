@@ -17,3 +17,6 @@ gotsmart
 
 # IntelliJ dir
 .idea/
+
+# target dir
+target

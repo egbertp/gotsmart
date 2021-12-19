@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/metskem/gotsmart/dsmr"
+	"github.com/egbertp/gotsmart/dsmr"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

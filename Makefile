@@ -10,10 +10,10 @@ endif
 COMMIT_HASH=`git rev-parse --short=8 HEAD 2>/dev/null`
 BUILD_TIME=`date +%FT%T%z`
 LDFLAGS=-ldflags "-s -w \
-	-X github.com/metskem/gotsmart/conf.BuildTime=${BUILD_TIME} \
-	-X github.com/metskem/gotsmart/conf.VersionTag=${VERSION_TAG}"
+	-X github.com/egbertp/gotsmart/conf.BuildTime=${BUILD_TIME} \
+	-X github.com/egbertp/gotsmart/conf.VersionTag=${VERSION_TAG}"
 
-all: build linux darwin arm64
+all: build linux darwin armv6 armv7 arm64
 
 clean:
 	go clean
@@ -35,6 +35,11 @@ linux:
 darwin:
 	GOOS=darwin GOARCH=amd64 go build -o ./target/darwin_amd64/${BINARY} ${LDFLAGS} .
 
+armv6:
+	GOOS=linux GOARCH=arm GOARM=6 go build -o ./target/linux_armv6/${BINARY} ${LDFLAGS} .
+
+armv7:
+	GOOS=linux GOARCH=arm GOARM=7 go build -o ./target/linux_armv7/${BINARY} ${LDFLAGS} .
+
 arm64:
-	GOOS=linux GOARCH=arm GOARM=7 go build -o ./target/linux_arm64/${BINARY} ${LDFLAGS} .
-#   could not get this working on my Mac. So no cross-compile, for now I just compile it on my Raspberry PI
+	GOOS=linux GOARCH=arm64 go build -o ./target/linux_arm64/${BINARY} ${LDFLAGS} .
